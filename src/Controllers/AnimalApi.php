@@ -22,10 +22,10 @@ class AnimalApi extends Controller
     }
     // доабавляет всех животных
     public function addAnimal(Request $request){
-        $animal_data=$request->post();
-        $animal_data['passport']=(int) $animal_data['passport'];
-        $animal_data['vaccination']=(int) $animal_data['vaccination'];
-        $answer=$this->animalService->addAnimal($animal_data) ?
+        $animal_data = $request->post();
+        $animal_data['passport'] = (int) $animal_data['passport'];
+        $animal_data['vaccination'] = (int) $animal_data['vaccination'];
+        $answer = $this->animalService->addAnimal($animal_data) ?
             'Животное добавлено' : 'Ошибка добавления';
         return $this->ajaxResponse($answer);
         // метод сервиса на добавление животного в БД

@@ -56,7 +56,7 @@
       "method": "POST"
     },
     "api del animal": {
-      "patch": "/api/del_animal",
+      "path": "/api/del_animal",
       "controller": "Ifmo\\Web\\Controllers\\AnimalApi::delAnimal",
       "method": "GET"
     }
