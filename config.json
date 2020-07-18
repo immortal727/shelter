@@ -1,0 +1,71 @@
+{
+  "urls": {
+    "main": {
+      "path": "/",
+      "controller": "Ifmo\\Web\\Controllers\\IndexController::indexAction",
+      "method": "GET"
+    },
+    "show reg form": {
+      "path": "/registration",
+      "controller": "Ifmo\\Web\\Controllers\\AccountController::showRegForm",
+      "method": "GET"
+    },
+    "reg user": {
+      "path": "/registration",
+      "controller": "Ifmo\\Web\\Controllers\\AccountController::regUser",
+      "method": "POST"
+    },
+    "account": {
+      "path": "/account",
+      "controller": "Ifmo\\Web\\Controllers\\AccountController::account",
+      "method": "GET"
+    },
+    "logout": {
+      "path": "/logout",
+      "controller": "Ifmo\\Web\\Controllers\\AccountController::logout",
+      "method": "GET"
+    },
+    "login user": {
+      "path": "/login",
+      "controller": "Ifmo\\Web\\Controllers\\AccountController::login",
+      "method": "POST"
+    },
+    "animals category": {
+      "path": "/animals/{category}",
+      "controller": "Ifmo\\Web\\Controllers\\AnimalController::showCategory",
+      "method": "GET"
+    },
+    "animal by id": {
+      "path": "/animals/{category}/{id}",
+      "controller": "Ifmo\\Web\\Controllers\\AnimalController::showAnimal",
+      "method": "GET"
+    },
+    "api animals": {
+      "path": "/api/animals",
+      "controller": "Ifmo\\Web\\Controllers\\AnimalApi::animals",
+      "method": "GET"
+    },
+    "api add animal": {
+      "path": "/api/add/animal",
+      "controller": "Ifmo\\Web\\Controllers\\AnimalApi::addAnimal",
+      "method": "POST"
+    },
+    "api edit animal": {
+      "path": "/api/edit/animal",
+      "controller": "Ifmo\\Web\\Controllers\\AnimalApi::editAnimal",
+      "method": "POST"
+    },
+    "api del animal": {
+      "patch": "/api/del_animal",
+      "controller": "Ifmo\\Web\\Controllers\\AnimalApi::delAnimal",
+      "method": "GET"
+    }
+  },
+  "db": {
+    "server": "localhost",
+    "dbname": "shelter",
+    "user": "root",
+    "pass": "root",
+    "charset": "utf8"
+  }
+}

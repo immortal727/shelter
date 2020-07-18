@@ -1,0 +1,11 @@
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME}% !-f
+RewriteCond %{REQUEST_FILENAME}% !-d
+RewriteCond %{REQUEST_URI}% !^/static/
+
+Header set Access-Control-Allow-Origin "http://localhost:8080"
+Header add Access-Control-Allow-Headers "origin, x-requested-with, content-type"
+
+RewriteRule ^(.*)$ index.php [L,QSA]
+</IfModule>
